@@ -1,0 +1,379 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+body {
+  background-image: url("/assets/wallpaper/1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Roboto;
+}
+
+.topBarContainer {
+  display: grid;
+  position: fixed;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgba(0, 0, 0, 0.325);
+  backdrop-filter: blur(100px);
+  color: white;
+  font-size: 14px;
+  z-index: 100;
+}
+
+.leftSideContainer {
+  display: flex;
+  text-align: center;
+  gap: 10px;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.leftSideContainer div {
+  padding: 6px;
+}
+
+.leftSideContainer div:hover {
+  background-color: rgba(255, 255, 255, 0.321);
+  border-radius: 3px;
+  cursor: default;
+  transition: 0.3s ease;
+}
+
+.rightSideContainer {
+  display: flex;
+  gap: 6px;
+  text-align: center;
+  justify-content: right;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.rightSideContainer div {
+  padding: 6px;
+}
+
+.rightSideContainer div:hover {
+  background-color: rgba(255, 255, 255, 0.466);
+  border-radius: 3px;
+  cursor: default;
+  transition: 0.3s ease;
+}
+
+.dockContainer {
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  justify-content: center;
+  z-index: 99;
+
+}
+
+
+.elements {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.202);
+  transition: transform 0.3s ease;
+
+}
+
+.elements:hover {
+  transform: scale(1.4);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.elements div:hover {
+  transform: scale(1.4);
+  transition: transform 0.3s ease;
+}
+
+.elements div {
+  transition: transform 0.3s ease;
+}
+
+.openTab {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  position: fixed;
+  top: 35px;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+  z-index: 98;
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+  border: 0px;
+  font-size: 15px;
+  color: black;
+  display: none;
+  border-radius: 4px;
+  animation: fadeIn scaleDown 0.3s ease;
+  resize: both;
+}
+
+.topSection{
+  position: sticky;
+  background-color: white;
+  top: 0;
+}
+.wallpaperTabContainer{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  position: fixed;
+  background-color: white;
+  top: 35px;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+  z-index: 98;
+  width: 800px;
+  height: 400px;
+  overflow-y: scroll;
+  border: 0px;
+  font-size: 15px;
+  color: black;
+  display: none;
+  border-radius: 4px;
+  animation: fadeIn scaleDown 0.3s ease;
+  resize: both;
+}
+
+.wallpaperTabTitle{
+  width: 100%;
+  color: rgb(104, 104, 104);
+}
+
+.mainSection{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 10px;
+  justify-content: center;
+}
+.mainSection div img{
+  transition: 0.4s ease;
+}
+.mainSection div img:hover{
+  filter: grayscale(1);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.maximizeTab {
+  position: fixed !important;
+  top: 35px !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  animation: scaleUp 0.3s ease !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes scaleDown {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0px;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.sectionTop {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  height: 100%;
+}
+
+.sectionLeft {
+  background-color: rgba(255, 255, 255, 0.506);
+  backdrop-filter: blur(20px);
+}
+
+.listBtnsContainer {
+  display: grid;
+  height: 100%;
+  align-content: start;
+}
+
+.listBtns {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(5, 50px);
+  align-items: center;
+}
+
+.listBtns div {
+  display: grid;
+  align-items: center;
+}
+
+.sectionRight {
+  background-color: white;
+}
+
+.tabTitle {
+  display: flex;
+  color: rgb(104, 104, 104);
+  padding: 5px;
+  justify-content: center;
+  cursor:grab;
+}
+.devImage img{
+  object-fit: cover;
+  border-radius: 50%;
+}
+.devImage{
+  position: static;
+  z-index: 0;
+}
+
+.aboutPage {
+  color: black;
+  padding: 20px;
+}
+
+.pageHeading {
+  font-size: 40px;
+}
+
+.aboutPara {
+  text-align: left;
+}
+
+.tabBtns {
+  display: flex;
+  padding: 5px;
+  gap: 5px;
+}
+
+.tabBtns div:hover {
+  cursor: pointer;
+}
+
+.listBtns div {
+  height: 100%;
+  transition: 0.3s ease;
+}
+.listBtns a {
+  height: 100%;
+  text-decoration: none;
+  color: black;
+}
+.active{
+  background-color: rgba(255, 255, 255, 0.525);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.listBtns a:hover {
+  background-color: rgba(255, 255, 255, 0.525);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#closeTab {
+  background-color: #e6352b;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+#minimizeTab {
+  background-color: #ffcc03;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+#maximizeTab {
+  background-color: #4CBB17;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+/* Apple Loading Page */
+
+.appleLoadingPage{
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  background-color: black;
+  gap:20px ;
+}
+.appleLogo{
+  color: white;
+  justify-self: center;
+  align-self: flex-end;
+}
+.barBackground{
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: rgb(72, 72, 72);
+}
+.barForeground{
+  position: relative;
+  bottom: 6px;
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: white;
+  animation: loadingBar 5s ease;
+}
+@keyframes loadingBar {
+  0% {
+    width: 0px;
+  }
+  20%{
+    width: 20px;
+  }
+  100% {
+    width: 100%;
+  }
+}
