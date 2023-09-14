@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel = "icon" href = 
+"assets/svgs/appleLogo.svg" 
+        type = "image/x-icon">
+    </link>
+</head>
+
+<body id="root">
+    <div class="appleLoadingPage"id="loadingPage">
+        <div class="appleLogo"><img src="/assets/svgs/appleLogo.svg"height="80px"width="80px"></div>
+        <div class="loadingBar">
+            <div class="barBackground"></div>
+            <div class="barForeground"></div>
+        </div>
+    </div>
+
+
+
+    <div class="topBarContainer">
+        <div class="leftSideContainer">
+            <div><img src="assets/svgs/appleLogo.svg" height="18px"></div>
+            <div>Finder</div>
+            <div>File</div>
+            <div>Edit</div>
+            <div>View</div>
+            <div>Go</div>
+            <div>Window</div>
+            <div>Help</div>
+        </div>
+        <div class="rightSideContainer">
+            <div><img src="assets/svgs/theme.svg" height="18px"onclick="openWallpaperTab()"></div>
+            <div><img src="assets/svgs/wifi.svg" height="18px"></div>
+            <div><img src="assets/svgs/bluetooth.svg" height="18px"></div>
+            <div>
+                <script>
+                    var today = new Date();
+                    var dateold = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+                    var date = today.toDateString();
+                    document.write(date);
+
+                </script>
+            </div>
+            <div>
+                <script>
+                    var today = new Date();
+                    var time = today.toLocaleString([], {
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    });
+                    document.write(time);                    
+                </script>
+            </div>
+        </div>
+    </div>
+    <div id="openTab"class="openTab">
+        <div class="sectionTop"id="sectionTop">
+            <div class="sectionLeft">
+                <div class="tabBtns">
+                    <div id="closeTab"onclick="closeTab()"></div>
+                    <div id="minimizeTab"></div>
+                    <div id="maximizeTab"onclick="maximizeTab()"></div>
+                </div>
+                <div class="listBtnsContainer">
+                    <div class="listBtns">
+                       <div class="active">About Me</div>
+                        <a href="https://www.instagram.com/msingh_2000/"target="_"><div>Instagram</div></a>
+                        <a href="https://linkedin.com/in/msingh2000"target="_"><div>LinkedIn</div></a>
+                        <a href="https://github.com/msingh17122000"target="_"><div>Github</div></a>
+                        <a href="https://twitter.com/msingh_2000"target="_"><div>Twitter</div></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="sectionRight">
+                <div class="tabTitle"id="openTabheader">About Developer</div>
+                <div class="aboutPage">
+                    <div class="devImage"><img src="assets/svgs/user.svg"height="200px"width="200px"></div>
+                    <br>
+                    <div class="pageHeading">Manpreet Singh</div>
+                    <br>
+                    <div class="aboutPara">
+                        I'm a passionate web developer and designer with a B.Tech degree in
+                        Computer Science Engineering (CSE). Proficient in HTML, CSS, JavaScript,
+                        React.js, PHP, MySQL, and Flutter, I specialize in crafting user-friendly interfaces,
+                        building server-side applications, and creating cross-platform mobile apps. With a
+                        passion for problem-solving and a commitment to quality, I thrive in fast-paced
+                        environments and look forward to contributing to innovative projects.
+                        <br>
+                        <br>
+                        Thanks for checking out my project and feel free to follow me on social media.
+                        <br>
+                        <br>
+                       </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dockContainer">
+        <div class="elements">
+            <div><img src="/assets/svgs/appstore.svg" width="40px"></div>
+            <div><img src="/assets/svgs/finder.svg" width="40px"></div>
+            <div><img src="/assets/svgs/vscode.svg" width="40px"></div>
+            <div onclick="openTab()"><img src="/assets/svgs/dev.svg" width="40px"></div>
+            <div><img src="/assets/svgs/finder.svg" width="40px"></div>
+            <div><img src="/assets/svgs/vscode.svg" width="40px"></div>
+            <div><img src="/assets/svgs/appstore.svg" width="40px"></div>
+        </div>
+    </div>
+
+    <!-- Wallpaper Window -->
+    <div class="wallpaperTabContainer"id="wallpaperTab">
+        <div class="topSection"id="wallpaperTabheader">
+            <div class="tabBtns">
+                <div id="closeTab"onclick="closeTabWall()"></div>
+                <div id="minimizeTab"></div>
+                <div id="maximizeTab"onclick="maximizeTabWall()"></div>
+                <div class="wallpaperTabTitle">Change Wallpaper</div>
+            </div>
+            
+        </div>
+        <div class="mainSection">
+            <div class="devImage"><img src="assets/wallpaper/1.jpg"height="200px"width="200px"onclick="ChangeWall(this)"></div>
+            <div class="devImage"><img src="assets/wallpaper/2.jpg"height="200px"width="200px"onclick="ChangeWall(this)"></div>
+        </div>
+        <br><br>
+        <div>Click on the wallpaper to apply</div>
+    </div>
+
+
+</body>
+<script src="/js/index.js"></script>
+
+</html>
