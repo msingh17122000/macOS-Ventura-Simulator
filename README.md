@@ -5,6 +5,8 @@ Apple Loading Screen,
 Change Wallpaper,
 Developers Tab,
 
+For best experience use it in full screen mode by pressing F11.
+
 https://msingh17122000.github.io/macOS-Ventura-Simulator/
 
 - Manpreet Singh
